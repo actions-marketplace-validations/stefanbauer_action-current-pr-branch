@@ -1,0 +1,19 @@
+name: 'Current Pull Request Branch'
+description: 'Retrieve the branch name related to the current pull request'
+inputs:
+    github_token:
+        description: 'The github token secret'
+        required: true
+outputs:
+    branch_name:
+        description: 'The branch name related to the current pull request'
+    pull_request_title:
+        description: 'The title of the current pull request'
+    pull_request_url:
+        description: 'The URL of the current pull request'
+runs:
+    using: 'node12'
+    main: 'dist/index.js'
+branding:
+    icon: 'git-pull-request'
+    color: 'gray-dark'
